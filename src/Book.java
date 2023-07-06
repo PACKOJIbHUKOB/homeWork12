@@ -1,21 +1,35 @@
+import java.util.Objects;
+
 public class Book {
-    private Author author;
-    private String titleBook;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return Objects.equals(getAuthor(), book.getAuthor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAuthor());
+    }
+
+    private final Author author;
+    private final String titleBook;
     private int ageOfPublication;
     public Book(Author author,String titleBook,int ageOfPublication){
         this.author=author;
         this.titleBook=titleBook;
         this.ageOfPublication=ageOfPublication;
     }
-    public String getAuthor() {
-        return ""+author;
+    public Author getAuthor() {
+        return author;
     }
     public String getTitleBook() {
-        return titleBook;
+        return String.format("Назавание книги: %s\n",titleBook);
     }
-    public int getAgeOfPublication() {
-
-        return ageOfPublication;
+    public String getAgeOfPublication() {
+        return String.format("Название книги: %s\n",ageOfPublication);
     }
     public void setAgeOfPublication(int ageOfPublication) {
         this.ageOfPublication = ageOfPublication;
