@@ -25,11 +25,13 @@ public class Book {
     public Author getAuthor() {
         return author;
     }
+
     public String getTitleBook() {
         return String.format("Назавание книги: %s\n",titleBook);
     }
+
     public String getAgeOfPublication() {
-        return String.format("Название книги: %s\n",ageOfPublication);
+        return String.format("Год издания: %s\n",ageOfPublication);
     }
     public void setAgeOfPublication(int ageOfPublication) {
         this.ageOfPublication = ageOfPublication;
