@@ -11,7 +11,7 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getAuthor());
+        return Objects.hash(getAuthor(),getTitleBook(),getAgeOfPublication());
     }
 
     private final Author author;
