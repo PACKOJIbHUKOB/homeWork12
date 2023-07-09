@@ -11,6 +11,5 @@ public class app {
         System.out.println(prozrachnieVitrazi.getAuthor()+prozrachnieVitrazi.getTitleBook()+prozrachnieVitrazi.getAgeOfPublication()+"hashcode: "+prozrachnieVitrazi.hashCode());
         System.out.println(cherepNaRukove.getAuthor()+cherepNaRukove.getTitleBook()+cherepNaRukove.getAgeOfPublication()+"hashcode: "+cherepNaRukove.hashCode());
         System.out.println(labirintOtrazeniy.equals(prozrachnieVitrazi));
-        System.out.println(cherepNaRukove.equals(prozrachnieVitrazi));
     }
 }
