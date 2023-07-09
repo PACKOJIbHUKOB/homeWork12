@@ -9,7 +9,7 @@ public class Author {
     }
     @Override
     public String toString(){
-        return String.format("Автор книги: %s %s\n", authorName, authorSurname);
+        return String.format("%s %s",authorName,authorSurname);
     }
     @Override
     public boolean equals(Object o) {

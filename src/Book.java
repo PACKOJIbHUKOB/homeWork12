@@ -14,11 +14,10 @@ public class Book {
     }
 
     public String getTitleBook() {
-        return String.format("Назавание книги: %s\n",titleBook);
+        return titleBook;
     }
-
-    public String getAgeOfPublication() {
-        return String.format("Год издания: %s\n",ageOfPublication);
+    public int getAgeOfPublication() {
+        return ageOfPublication;
     }
     public void setAgeOfPublication(int ageOfPublication) {
         this.ageOfPublication = ageOfPublication;
@@ -34,5 +33,9 @@ public class Book {
     @Override
     public int hashCode() {
         return Objects.hash(getAuthor(),getTitleBook(),getAgeOfPublication());
+    }
+    @Override
+    public String toString() {
+        return String.format("Автор книги: %s\nНазвание книги: %s\nГод публикации: %s\n",author,titleBook,ageOfPublication);
     }
 }
